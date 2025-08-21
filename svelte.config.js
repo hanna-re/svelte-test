@@ -1,10 +1,7 @@
-import adapter from '@sveltejs/adapter-static';
+import adapter from '@sveltejs/adapter-netlify';
 
 export default {
   kit: {
-    adapter: adapter(),
-    paths: {
-      base: ''
-    }
+    adapter: adapter()
   }
 };
