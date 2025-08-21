@@ -2,9 +2,13 @@
   let message = "Loading...";
 
   async function fetchMessage() {
-    const res = await fetch("https://yourusername.pythonanywhere.com/api/hello");
-    const data = await res.json();
-    message = data.message;
+    try {
+      const res = await fetch("https://yourusername.pythonanywhere.com/api/hello");
+      const data = await res.json();
+      message = data.message;
+    } catch (err) {
+      message = "Error fetching message";
+    }
   }
 
   fetchMessage();
