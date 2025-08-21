@@ -1,18 +1,18 @@
 <script>
-  let message = "Loading...";
+  let message = 'Loading...';
 
   async function fetchMessage() {
     try {
-      const res = await fetch("https://yourusername.pythonanywhere.com/api/hello");
+      const res = await fetch('https://hanna03re.pythonanywhere.com/api/hello');
       const data = await res.json();
       message = data.message;
     } catch (err) {
-      message = "Error fetching message";
+      message = 'Failed to fetch message';
     }
   }
 
   fetchMessage();
 </script>
 
-<h1>Flask + SvelteKit</h1>
+<h1>Flask Backend Message</h1>
 <p>{message}</p>
